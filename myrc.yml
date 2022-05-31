@@ -1,21 +1,19 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-    name: myjavaapp-rc
+  name: mynignxapp-rc
 spec:
   replicas: 3    
   selector:
-     app: myjavaapp
-     version: 2.6.2
+     app: mynignxapp
   template: 
    metadata: 
-   labels:
-       app: myjavaapp
-       version: 2.6.2
+      labels:
+         app: mynignxapp
    spec:
      containers:
-     - name: myjavaapp-container
-       image:  gajjinaresh/new31may:2
+     - name: nignx-container
+       image: nignx
        ports:
-       - containerPort: 8080
+        - containerPort: 8080
 
