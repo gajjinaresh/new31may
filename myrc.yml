@@ -6,10 +6,12 @@ spec:
   replicas: 3    
   selector:
      app: mynignxapp
+     version: 2.6.1
   template: 
    metadata: 
       labels:
          app: mynignxapp
+         version: 2.6.1
    spec:
      containers:
      - name: nignx-container
