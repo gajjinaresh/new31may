@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: mynignxapp-rc
 spec:
-  replicas: 3    
+  replicas: 4   
   selector:
      app: mynignxapp
      version: 2.6.1
@@ -15,7 +15,7 @@ spec:
    spec:
      containers:
      - name: nignx-container
-       image: nignx
+       image: nareshgajji/myjava:1
        ports:
         - containerPort: 8080
 
